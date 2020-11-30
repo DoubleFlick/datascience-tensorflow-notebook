@@ -6,6 +6,7 @@ FROM $BASE_CONTAINER
 LABEL maintainer="cybuster"
 
 # Install Tensorflow
+USER root
 RUN pip install --quiet --no-cache-dir \
     'tensorflow==2.3.1' && \
     fix-permissions "${CONDA_DIR}" && \
